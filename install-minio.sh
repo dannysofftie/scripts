@@ -53,9 +53,11 @@ sudo systemctl daemon-reload
 
 curl -O https://raw.githubusercontent.com/minio/minio-service/master/linux-systemd/minio.service
 
-sudo mv minio.service /etc/systemd/system/ && sudo systemctl daemon-reload
+sudo mv minio.service /etc/systemd/system/
 
-sudo killall minio && sudo systemctl enable minio
+sudo systemctl daemon-reload
+
+sudo systemctl enable minio
 
 sudo systemctl start minio
 
